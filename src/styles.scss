@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    background-image: url('./assets/poker.jpg');
+    background-size: cover;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .margin-0 {
+        margin: 0;
+    }
+    .padding-0 {
+        padding: 0;
+    }
+
+    .header {
+        flex: 0 0 auto;
+        color: white;
+    }
+
+    .body {
+        flex: 1 1 auto;
+    }
+}

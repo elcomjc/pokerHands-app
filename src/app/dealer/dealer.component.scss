@@ -1,0 +1,85 @@
+.dealer {
+    flex: 1 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button-box {
+        flex: 1 1 auto;
+
+        &.right {
+            text-align: left;
+        }
+        &.left {
+            text-align: right;
+        }
+        
+        > button {
+            width: 80%;
+        }
+    }
+
+    .image-box {
+        flex: 0 1 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        > img {
+            flex: 1 0 auto;
+            width: 50%;
+            align-self: center;
+        }
+
+        > button {
+            flex: 0 0 auto;
+        }
+
+        > span {
+            flex: 0 0 auto;
+            align-self: center;
+            color: white;
+        }
+
+        > div.alert {
+            flex: 0 0 auto;
+            align-self: center;
+        }
+    }
+}
+
+app-hand {
+    flex: 1 0 auto;
+    margin: 20px;
+    &.one {
+        border: 5px solid #3498db;
+    }
+
+    &.two {
+        border: 5px solid #2ecc71;
+    }
+}
+
+
+.winner-hand {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+
+    > div {
+        font-size: 1.5em;
+    }
+
+    .message-blue {
+        color: #3498db;
+    }
+
+    .message-green {
+        color: #2ecc71;
+    }
+
+    .message-gray {
+        color: gray;
+    }
+}

@@ -1,0 +1,36 @@
+.card {
+    width: 100px;
+    height: 160px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .number-top {
+        font-size: 2em;
+        flex: 0 1 auto;
+        align-self: flex-start;
+        margin-left: 5px;
+    }
+
+    .suit {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+
+        > img {
+            flex: 1 0 auto;
+            width: 50px;
+        }
+    }
+
+    .number-bottom {
+        flex: 0 1 auto;
+        align-self: flex-end;
+        margin-right: 5px;
+        font-size: 1.8em;
+    }
+}

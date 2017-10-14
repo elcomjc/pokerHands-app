@@ -1,0 +1,12 @@
+<div class="hand">
+  <app-card *ngFor="let card of hand" [suit]="card.suit" [number]="card.number"></app-card>
+  <div *ngIf="hand.length === 0 && !loadingHand" class="no-cards-message">
+    No hand yet 
+  </div>
+  <div class="spinner spinner-white" *ngIf="loadingHand">
+    <div class="spinner__item1"></div>
+    <div class="spinner__item2"></div>
+    <div class="spinner__item3"></div>
+    <div class="spinner__item4"></div>
+  </div>
+</div>

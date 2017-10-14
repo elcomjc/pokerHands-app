@@ -1,0 +1,16 @@
+$gray: rgba(40, 95, 93, 0.7);
+
+.poker-table {
+    background-color: $gray;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    app-dealer {
+        flex: 1 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

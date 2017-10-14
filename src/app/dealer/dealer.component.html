@@ -1,0 +1,27 @@
+<div class="dealer">
+    <div class="button-box left">
+      <button *ngIf="isDeckActivated" (click)="getDeckTwoHands()" [disabled]="haveToShuffle" class="btn btn-primary">New hands</button>
+    </div>
+    <div class="image-box">
+      <img src="./assets/dealer.png" alt="">
+      <div class="alert alert-danger" role="alert" *ngIf="serviceError">{{errorMessage}}</div>
+      <div class="alert alert-info" role="alert" *ngIf="haveToShuffle">{{errorMessage}}</div>
+      <button class="btn btn-success" [disabled]="loadingDeck" (click)="activateDeck()" *ngIf="!isDeckActivated">Init deck</button>
+    </div>
+    <div class="button-box right">
+      <button *ngIf="isDeckActivated" class="btn btn-primary" (click)="resetDeckToken()">Shuffle deck</button>
+    </div>
+</div>
+<app-hand class="one" [hand]="handOne" [loadingHand]="loadingHands"></app-hand>
+<app-hand class="two" [hand]="handTwo" [loadingHand]="loadingHands"></app-hand>
+<div class="winner-hand text-center" *ngIf="winnerHand.number !== -1">
+  <div class="message-blue" *ngIf="winnerHand.number === 1">
+    The Winner hand is the Blue One!!!
+  </div>
+  <div class="message-green" *ngIf="winnerHand.number === 2">
+      The Winner hand is the Green One!!!
+  </div>
+  <div class="message-gray" *ngIf="winnerHand.number === 0">
+      There is a Tie!!!
+  </div>
+</div>
