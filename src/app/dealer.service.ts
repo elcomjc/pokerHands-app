@@ -16,7 +16,7 @@ export class DealerService {
     return this.http.post(CONSTANTS.API_URL + 'deck', {}, {responseType: 'text'});
   }
 
-  getHands(deck_token: string): Observable<Array<Card>> {
+  getHands(deck_token: string): Observable<any> {
     if (deck_token) {
       return this.http.get(CONSTANTS.API_URL + 'deck/' + deck_token + '/deal/10');
     } else {
